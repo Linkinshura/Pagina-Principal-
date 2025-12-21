@@ -1,45 +1,92 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
+/* Fuente y colores base */
 body {
-    background: #0f172a;
-    color: #e5e7eb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* azul oscuro */
+    color: #e5e7eb; /* gris claro */
+    line-height: 1.6;
 }
 
+/* Header */
 header {
     text-align: center;
-    padding: 40px;
-    background: #020617;
+    padding: 2.5rem 1rem;
+    background: linear-gradient(135deg, #1e293b, #020617);
+    border-bottom: 1px solid #334155;
 }
 
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+/* Contenedor principal */
 .contenedor {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 40px;
+    gap: 1.5rem;
 }
 
+/* Tarjeta de proyecto */
 .proyecto {
-    background: #020617;
-    padding: 20px;
+    background-color: #020617;
+    border: 1px solid #1e293b;
     border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.links {
-    margin-top: 15px;
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.links a {
-    margin-right: 10px;
-    text-decoration: none;
+.proyecto h2 {
+    margin-bottom: 0.5rem;
     color: #38bdf8;
-    font-weight: bold;
+}
+
+.proyecto p {
+    color: #cbd5f5;
+    margin-bottom: 1.2rem;
+}
+
+/* Links */
+.links a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #38bdf8;
+    color: #020617;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .links a:hover {
-    text-decoration: underline;
+    background-color: #0ea5e9;
+    transform: scale(1.05);
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #1e293b;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
